@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Educational Resources</title>
+    <style>
+      body { margin: 0; font-family: Arial, sans-serif; text-align: center; }
+      iframe { width: 100%; height: 95vh; border: none; }
+    </style>
+  </head>
+  <body>
+    <h1>Shared Hyperbeam Browser</h1>
+    <iframe id="hyperbeam"></iframe>
+
+    <script>
+      async function startSession() {
+        const response = await fetch("/.netlify/functions/createSession");
+        const data = await response.json();
+        document.getElementById("hyperbeam").src = data.url;
+      }
+      startSession();
+    </script>
+  </body>
+</html>
