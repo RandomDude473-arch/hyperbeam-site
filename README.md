@@ -1,2 +1,2 @@
-# hyperbeam-website
+# hyperbeam-site
 buh...
